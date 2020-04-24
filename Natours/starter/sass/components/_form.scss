@@ -9,7 +9,7 @@
     color: inherit;
     padding: 1.5rem 2rem;
     border-radius: 2px;
-    background-color: rgba($color-white, 0.5);
+    background-color: rgba($color-white, $alpha: 0.5);
     border: none;
     border-bottom: 3px solid transparent;
     width: 90%;
@@ -22,17 +22,17 @@
 
     &:focus {
       outline: none;
-      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      box-shadow: 0 1rem 2rem rgba($color-black, $alpha: 0.1);
       border-bottom: 3px solid $color-primary;
     }
 
     &:focus:invalid {
       border-bottom: 3px solid $color-secondary-dark;
     }
+  }
 
-    &::-webkit-input-placeholder {
-      color: $color-grey-dark-2;
-    }
+  &::-webkit-input-placeholder {
+    color: $color-grey-dark-2;
   }
 
   &__label {
@@ -41,7 +41,6 @@
     margin-left: 2rem;
     margin-top: 0.7rem;
     display: block;
-    transition: all 0.3s;
   }
 
   &__input:placeholder-shown + &__label {
@@ -79,7 +78,7 @@
     display: inline-block;
     position: absolute;
     left: 0;
-    top: -0.4rem;
+    top: -4px;
 
     &::after {
       content: "";
